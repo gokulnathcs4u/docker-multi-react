@@ -16,7 +16,7 @@ jobs:
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       # befor install build docker image
-      - run: docker build -t gokulcs4u/react-multi-test -f ../../client/Dockerfile.dev ../../client
+      - run: docker build -t gokulcs4u/react-multi-test -f ../../../client/Dockerfile.dev ../../../client
 
       # run test scripts
       - run: docker run -e CI=true gokulcs4u/react-multi-test npm run test -- --coverage
