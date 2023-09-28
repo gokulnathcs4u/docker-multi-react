@@ -19,7 +19,7 @@ jobs:
       - run: docker build -t gokulcs4u/react-multi-test -f ./client/Dockerfile.dev ./client
 
       # run test scripts
-      - run: docker run -e CI=true gokulcs4u/react-multi-test npm run test -- --coverage
+      - run: docker run -e CI=true gokulcs4u/react-multi-test npm test -- --coverage
 
       # after install build other images and push to docker hub
       - run: docker build -t gokulcs4u/multi-client ./client
