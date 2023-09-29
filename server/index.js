@@ -57,7 +57,7 @@ app.post("/values", async (req, res) => {
     return res.status(422).send("Index too high");
   }
 
-  await publisher.publish("insert", JSON.stringify(index));
+  await publisher.publish("insert", index);
   await pgClient.query("INSERT INTO values(number) VALUES($1)", [index]);
 
   res.send({ working: true });
