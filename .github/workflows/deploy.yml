@@ -46,5 +46,5 @@ jobs:
           application_name: multi-docker
           environment_name: Multi-docker-env
           existing_bucket_name: elasticbeanstalk-ap-south-1-092737449886
-          version_label: ${{ github.sha }}
+          version_label: 28092023
           deployment_package: deploy.zip
