@@ -47,6 +47,6 @@ jobs:
           environment_name: Multi-docker-env
           existing_bucket_name: elasticbeanstalk-ap-south-1-092737449886
           version_label: "deployment6"
-          deployment_package: deploy.zip
+
       - name: Deployed!
         run: echo App deployed to ELB
