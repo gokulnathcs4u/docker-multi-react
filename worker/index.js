@@ -43,7 +43,9 @@ const insertIndex = async (message) => {
   console.log("Inside insertIndex");
   console.log(message);
   try {
-    sub.hSet("values1", message, fib(parseInt(message)));
+    var val = parseInt(message);
+    val = val * 3;
+    sub.hSet("values1", message, val);
   } catch (e) {
     console.log(e);
   }
